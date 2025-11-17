@@ -1,0 +1,27 @@
+.jsi-icon-picker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.jsi-icon-select {
+    min-width: 260px;
+    padding: 4px 8px;
+}
+
+.jsi-icon-preview-wrap {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.jsi-icon-preview {
+    font-size: 22px;
+    color: #111827;
+}

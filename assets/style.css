@@ -1,0 +1,54 @@
+/* Design-aligned styles (Inter font, right slide-in, backdrop, floating close) */
+#jsi-slidein { position: fixed; z-index: 99999; font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+#jsi-slidein.jsi-right { right: 0; top: 0; }
+#jsi-slidein.jsi-left { left: 0; top: 0; }
+
+/* Trigger button — middle right, rounded vertical pill */
+#jsi-slidein .jsi-trigger { position: fixed; top: 50%; transform: translateY(-50%); right: 0; background: #fff; color: var(--jsi-primary, #8E2DE2); border: none; border-radius: 20px 0 0 20px; width: 60px; height: 60px; box-shadow: -2px 2px 12px rgba(0,0,0,.15); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: box-shadow .3s ease, color .3s ease; font-size: 20px; }
+#jsi-slidein .jsi-trigger:hover { box-shadow: -4px 4px 16px rgba(0,0,0,.2); }
+#jsi-slidein .jsi-trigger .fa-fw { font-size: 24px; }
+#jsi-slidein .jsi-trigger-label { padding: 0 12px; font-weight: 600; letter-spacing: .5px; color: inherit; text-transform: uppercase; font-size: 13px; }
+
+/* Backdrop */
+#jsi-slidein .jsi-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.5); backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility .3s ease; }
+#jsi-slidein.open .jsi-backdrop { opacity: 1; visibility: visible; }
+
+/* Sliding container that holds close button and panel */
+#jsi-slidein .jsi-container { position: fixed; top: 0; right: -450px; width: 450px; height: 100vh; transition: right .4s cubic-bezier(.4,0,.2,1); pointer-events: none; z-index: 100000; }
+#jsi-slidein.open .jsi-container { right: 0; pointer-events: auto; }
+
+/* Panel inside container — full height */
+#jsi-slidein .jsi-panel { position: absolute; top: 0; right: 0; width: 380px; height: 100vh; background: var(--jsi-form-bg, #fff); color: var(--jsi-form-text, #1f2937); box-shadow: 0 16px 40px rgba(0,0,0,.22); overflow-y: auto; }
+
+/* Close button inside container — vertically centered to left of panel */
+#jsi-slidein .jsi-close-btn { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: #fff; border: none; border-radius: 20px 0 0 20px; width: 50px; height: 50px; box-shadow: -2px 2px 12px rgba(0,0,0,.15); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+#jsi-slidein .jsi-close-btn:hover { box-shadow: -4px 2px 16px rgba(0,0,0,.2); }
+#jsi-slidein .jsi-close-icon { width: 20px; height: 20px; color: var(--jsi-accent, #E14D2A); }
+
+/* Hide trigger when panel open (slides off-screen) */
+#jsi-slidein.open .jsi-trigger { right: -70px; }
+
+/* Chat icon sizing */
+#jsi-slidein .jsi-chat-icon { width: 32px; height: 32px; }
+
+/* Header */
+.jsi-header { text-align: center; padding: 40px 30px 20px; border-bottom: 1px solid rgba(229,231,235,.6); }
+.jsi-header h3 { font-size: 20px; font-weight: 600; color: var(--jsi-form-text, #1f2937); margin: 0 0 12px; letter-spacing: .5px; text-transform: uppercase; }
+.jsi-header p { font-size: 14px; color: rgba(55,65,81,.85); margin: 0; line-height: 1.5; }
+
+/* Form */
+.jsi-form { padding: 30px; }
+.jsi-field { margin-bottom: 14px; }
+.jsi-form-label { font-size: 13px; font-weight: 500; color: var(--jsi-form-text, #1f2937); margin-bottom: 6px; display: block; }
+.jsi-form-control { width: 100%; padding: 10px 14px; border: 1px solid rgba(209,213,219,.9); border-radius: 4px; font-size: 14px; color: var(--jsi-form-text, #1f2937); background: rgba(255,255,255,.9); transition: border-color .2s ease, box-shadow .2s ease; }
+.jsi-form-control:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,.1); outline: none; }
+.jsi-form-control::placeholder { color: #9ca3af; }
+.jsi-form-control textarea, textarea.jsi-form-control { min-height: 100px; resize: vertical; }
+.jsi-recaptcha { margin: 16px 0 20px; }
+
+.jsi-actions { margin-top: 6px; }
+.jsi-submit { background: var(--jsi-primary, #8E2DE2); color: #fff; border: none; border-radius: 4px; padding: 12px 24px; font-size: 15px; font-weight: 500; width: 100%; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+.jsi-submit:hover { background: var(--jsi-accent, #E14D2A); transform: translateY(-1px); }
+
+.jsi-required { color: var(--jsi-accent, #E14D2A); }
+.jsi-status { margin-top: 8px; font-size: 13px; }
