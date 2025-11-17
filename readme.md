@@ -6,6 +6,15 @@ This WordPress plugin delivers a lightweight slide-in form that gathers a visito
 2. **Thoughtful timing:** The panel auto-opens one time, 10 seconds after the very first page a visitor loads, then stays hidden for the rest of the session and for the next 24 hours.
 
 All responses are saved to the WordPress database and visible inside the admin area, so editors can follow up without leaving the dashboard.
+---
+
+## Screenshots
+<img width="1685" height="1390" alt="Screenshot 2025-11-17 165945" src="https://github.com/user-attachments/assets/49568a2d-fdc0-402f-bc6a-159308e6b896" />
+<img width="1577" height="1407" alt="Screenshot 2025-11-17 165956" src="https://github.com/user-attachments/assets/136a40d9-c57b-4b08-a559-e37d8b33f1bb" />
+<img width="809" height="1265" alt="Screenshot 2025-11-17 170015" src="https://github.com/user-attachments/assets/2a42f6b4-61c8-4618-a49e-ffa7ff1fb42a" />
+<img width="508" height="124" alt="image" src="https://github.com/user-attachments/assets/66671720-3281-4a70-b1b7-5eb1b4e8daae" />
+
+
 
 ---
 
